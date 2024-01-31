@@ -162,7 +162,7 @@ const About = () => {
 					<div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
 						{aboutData.map((item, itemIndex) => (
 							<div
-								// key={itemIndex}
+								key={itemIndex}
 								className={`${
 									index === itemIndex
 										? 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'
@@ -188,8 +188,8 @@ const About = () => {
 								<div>{item.stage}</div>
 								<div className="flex flex-wrap justify-center md:justify-normal text-xs md:text-sm gap-1 md:gap-2">
 									{/* {tags} */}
-									{item.tags?.map(tag => (
-										<Badge text={tag} />
+									{item.tags?.map((tag, tagIndex) => (
+										<Badge key={tagIndex} text={tag} />
 									))}
 								</div>
 							</div>

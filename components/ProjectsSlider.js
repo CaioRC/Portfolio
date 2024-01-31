@@ -96,7 +96,7 @@ const ProjectsSlider = () => {
 								{/* tags */}
 								<div className="flex flex-wrap md:justify-normal text-xs md:text-sm gap-1 md:gap-2 ">
 									{project.tags?.map((tag, index) => (
-										<Badge text={tag} />
+										<Badge key={index} text={tag} />
 									))}
 								</div>
 
